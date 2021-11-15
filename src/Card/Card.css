@@ -1,0 +1,44 @@
+
+.card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-sizing: border-box;
+  
+}
+
+.card-item{
+    flex-basis: 240px;
+    margin: 5px;
+    cursor: pointer;
+    position: relative;
+    border: 6px solid #fff;
+}
+
+.card-image{
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    width: 100%;
+}
+.card-image .front{
+    transform: rotateY(90deg);
+    position: absolute;
+    transition: all 0.2s ease-in;
+}
+
+.flipped .front{
+    transform: rotateY(0deg);
+}
+
+.card-image .back {
+    transition: all 0.2s ease-in;
+    transition-delay: 0.2s;
+}
+
+.flipped .back{
+    transform: rotateY(90deg);
+    transition-delay: 0.2s;
+}
